@@ -2,12 +2,15 @@ INCLUDES = -I ./includes
 
 LIBFT = libft/libft.a
 
+UTILS =	./utils/conversions_bin.c \
+		./utils/ft_strlen_md5.c
+
 SRCS =	./srcs/main.c \
 		./srcs/err_messages.c \
 		./srcs/md5.c \
 		./srcs/sha256.c
 
-OBJ = $(SRCS:.c=.o)
+OBJ = $(SRCS:.c=.o) $(UTILS:.c=.o)
 
 EXEC = ft_ssl
 
